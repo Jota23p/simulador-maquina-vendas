@@ -1,0 +1,142 @@
+/* Estilos anteriores... (corpo, container, etc) */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.maquina-container {
+    background-color: #3A4D6F;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+}
+
+.titulo-principal h1 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.menu-interno {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.menu-interno h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* NOVA CLASSE PARA ESCONDER TELAS */
+.hidden {
+    display: none;
+}
+
+/* Estilos dos botões do menu principal */
+.botoes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-azul { background-color: #4A90E2; }
+.btn-vermelho { background-color: #D0021B; grid-column: 1 / -1; }
+.btn-cinza { background-color: #9B9B9B; }
+
+/* NOVOS ESTILOS PARA FORMULÁRIO (TELA DE CADASTRO) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+.botoes-acao {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#lista-produtos {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    min-height: 40px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 25px 0;
+}
+
+/* NOVOS ESTILOS PARA TELA DE PAGAMENTO */
+.total-pagar { text-align: center; font-size: 1.2em; font-weight: 500; }
+.escolha-pagamento { text-align: center; color: #555; margin-bottom: 20px; }
+
+.opcoes-pagamento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.opcao-pagamento {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.opcao-pagamento:hover { transform: scale(1.05); }
+.opcao-pagamento.selected { border-color: #4A90E2; font-weight: bold; }
+
+/* Cores das opções de pagamento */
+.opcoes-pagamento div:nth-child(1) { background-color: #E9F8E9; } /* Dinheiro */
+.opcoes-pagamento div:nth-child(2) { background-color: #EBF4FF; } /* Débito */
+.opcoes-pagamento div:nth-child(3) { background-color: #F8EBF8; } /* Crédito */
+.opcoes-pagamento div:nth-child(4) { background-color: #FFF9E6; } /* PIX */
